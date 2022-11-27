@@ -11,7 +11,7 @@ class Book extends Model
     protected $table = 'books';
 
     public function publishers(){
-        return $this->belongsTo(Publisher::class);
+        return $this->belongsTo(Publisher::class, 'publisherId');
     }
 
     public function categories(){
